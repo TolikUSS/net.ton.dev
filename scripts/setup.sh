@@ -17,7 +17,7 @@ until [ "$(echo "${MY_ADDR}" | grep "\." -o | wc -l)" -eq 3 ] ; do
 done
 echo "INFO: MY_ADDR = ${MY_ADDR}"
 
-sudo rm -rf "${TON_WORK_DIR}"
+sudo rm -rf "${TON_WORK_DIR}/*"
 
 sudo mkdir -p "${TON_WORK_DIR}"
 sudo chown "${SETUP_USER}:${SETUP_GROUP}" "${TON_WORK_DIR}"
